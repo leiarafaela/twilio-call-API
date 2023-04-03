@@ -1,5 +1,4 @@
 from secrets_1 import account_sid, auth_token, my_number, twilio_number
-import os
 from twilio.rest import Client
 
 
