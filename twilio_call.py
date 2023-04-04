@@ -1,6 +1,12 @@
-from secrets_1 import account_sid, auth_token, my_number, twilio_number
+from dotenv import load_dotenv
 from twilio.rest import Client
+import os
 
+load_dotenv()
+account_sid = os.getenv("ACCOUNT_SID")
+auth_token = os.getenv("AUTH_TOKEN")
+my_number = os.getenv("MY_NUMBER=+5511997689989")
+twilio_number = os.getenv("TWILIO_NUMBER")
 
 client= Client(account_sid, auth_token)
 
