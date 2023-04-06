@@ -6,7 +6,7 @@ import os
 load_dotenv()
 account_sid = os.getenv("ACCOUNT_SID")
 auth_token = os.getenv("AUTH_TOKEN")
-my_number = os.getenv("MY_NUMBER=+5511997689989")
+my_number = os.getenv("MY_NUMBER")
 twilio_number = os.getenv("TWILIO_NUMBER")
 
 client = Client(account_sid, auth_token)

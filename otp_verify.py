@@ -6,7 +6,7 @@ import os
 load_dotenv()
 account_sid = os.getenv("ACCOUNT_SID")
 auth_token = os.getenv("AUTH_TOKEN")
-my_number = os.getenv("MY_NUMBER=+5511997689989")
+my_number = os.getenv("MY_NUMBER")
 twilio_number = os.getenv("TWILIO_NUMBER") # Substitua pelo código informado pelo usuário
 verification_sid = os.getenv("VALIDATION_SID") # Substitua pela SID da verificação gerada pela API
 
@@ -20,7 +20,7 @@ client = Client(account_sid, auth_token)
 verification_check = client.verify \
                              .services('sua_service_sid') \
                              .verification_checks \
-                             .create(to='seu_numero_de_telefone', code='')
+                             .create(to=my_number, code='343903')
 
 # Verificar se a verificação foi aprovada
 if verification_check.status == 'approved':
